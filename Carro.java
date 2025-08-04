@@ -4,12 +4,11 @@ public class Carro {
     private Motor motor;
     private TanqueCombustivel tanque;
 
-    public Carro(String modelo, TipoCombustivel tipoCombustivel, int consumoMotor, int capacidadeTanque, TipoTanque tipoTanque) {
+    public Carro(String modelo, TipoCombustivel tipoCombustivel, int consumoMotor, int consumoMotor2, int capacidadeTanque, TipoTanque tipoTanque) {
         this.modelo = modelo;
-        motor = new Motor(tipoCombustivel, consumoMotor);
+        motor = new Motor(tipoCombustivel, consumoMotor, consumoMotor2);
         tanque = new TanqueCombustivel(tipoCombustivel, capacidadeTanque, tipoTanque);
-    }
-
+    };
     public String getModelo() {
         return modelo;
     }
