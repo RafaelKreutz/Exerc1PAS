@@ -1,7 +1,9 @@
+import java.sql.Time;
+
 public class Motor {
 
     private TipoCombustivel tipoMotor;
-    private int consumo; // em quilometros por unidade. Ex: Km/Lt
+    private int consumoalcool, consumogasolina; // em quilometros por unidade. Ex: Km/Lt
     private int quilometragem;
 
     public Motor(TipoCombustivel tipoMotor, int consumo) {
@@ -9,8 +11,10 @@ public class Motor {
         this.consumo = consumo;
     }
 
-    public int getConsumo() {
+    public int getConsumo(TipoTanque tipoTanque) {
+        if(tipoTanque == tipoTanque.FLEX)
         return this.consumo;
+
     }
 
     public TipoCombustivel getTipoMotor(){
